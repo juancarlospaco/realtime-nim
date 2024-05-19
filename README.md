@@ -1,1 +1,1 @@
-# realtime-nim
+# Supabase Realtime API Client

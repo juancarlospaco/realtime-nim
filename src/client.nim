@@ -5,7 +5,8 @@ import whisky  # https://github.com/guzba/whisky
 
 type
   RealtimeClient* = object
-    url*, channel*: string
+    channel*: string  # channel: string should be channels: seq[Channel] ???
+    url*: string
     client: WebSocket
 
   SREvents* {.pure.} = enum

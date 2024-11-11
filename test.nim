@@ -27,8 +27,6 @@ proc main() =
     chan2 = rclient.setChannel("broadcast_test", broadcast_config)
   defer: rclient.close()
 
-  rclient.ping()
-
   rclient.join(chan)
   chan.on_postgres_changes(PostgresChanges.INSERT, postgres_changes_callback, filter="item=eq.10")
   chan.on_postgres_changes(PostgresChanges.DELETE, delete_callback)

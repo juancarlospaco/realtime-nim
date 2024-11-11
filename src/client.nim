@@ -117,10 +117,6 @@ proc close*(self: RealtimeClient) =
   self.client.close()
 
 
-proc ping*(self: RealtimeClient) =
-  self.client.send("", MessageKind.Ping)
-
-
 template broadcast_config*(): RealtimeChannelOptions =
   RealtimeChannelOptions(config: RealtimeChannelConfig.broadcast)
 
